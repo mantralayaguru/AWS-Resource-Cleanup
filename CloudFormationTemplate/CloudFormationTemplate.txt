@@ -1,0 +1,26 @@
+This is the notes of what I have learnt from Safari Online Course. This is for my reference only.
+=================================================================================================
+CloudFormation is a declarative way of outlining AWS infrastructure, for any resources.
+
+For example, within a CloudFormation Template, yo say:
+1. I want a security group
+2. I want two EC2 machines using this security group
+3. I want two elastic IP's for these EC2 machines
+4. 1 want an S3 bucket
+5. I want a load balancer (ELB) in front of these machines
+
+The Cloud formation creates these resources for you in the right order, with the exact configuration specified.
+
+Benefits of the Cloud Formation:
+===============================
+1. Infrastructure as code
+2. This code can be version controller.
+3. Changes to the infrastructre are reviewed through the code.
+
+4. Cost:
+   a. Each Resource withing a Stack is tagged with an identifier, so you can easily see how much a stack costs you.
+   b. You can estimate the costs of your resources using the Cloud Formation Template.
+   c. Saving Strategy: In Dev, you could automate the deletion of templates at 5 PM and recreated at 8AM safely. 
+5. Productivity: 
+   a. The ability to destroy and re-create an infrastructure on the fly.
+   b. Automated generation of Diagram for your templates.
